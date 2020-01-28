@@ -6,11 +6,11 @@ module.exports = function( controller ) {
 
     controller.hears( [ 'hi','hello','howdy','hey','aloha','hola','bonjour','oi' ], 'message,direct_message', async ( bot,message ) => {
 
-        await bot.reply( message,'Greetings!' );
-        await bot.reply( message, { markdown: 'Try `help` to see available commands' } );
+        await bot.reply( message,'Hola!' );
+        await bot.reply( message, { markdown: 'Intenta con "ayuda" para ver mis comandos.' } );
       });
 
-    controller.hears( 'url', 'message,direct_message', async ( bot,message ) => {
+    controller.hears( 'gatito', 'message,direct_message', async ( bot,message ) => {
 
         await bot.reply( message, {
             text: 'Aww!',
@@ -25,7 +25,7 @@ module.exports = function( controller ) {
         })
     })
 
-    controller.commandHelp.push( { command: 'hello', text: 'Greetings!' } );
+    controller.commandHelp.push( { command: 'hello', text: 'Hola!' } );
     controller.commandHelp.push( { command: 'url', text: 'Attach a file via URL' } );
     controller.commandHelp.push( { command: 'local', text: 'Attach a file from the local file system' } );
 
