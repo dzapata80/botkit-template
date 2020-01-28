@@ -28,10 +28,10 @@ module.exports = function(controller) {
     });
 
 
-    controller.hears('create a room','message,direct_message', async(bot, message) => {
+    controller.hears('Crea un grupo privado','message,direct_message', async(bot, message) => {
 
         // create a room
-        let room = await bot.api.rooms.create({title: 'botkit test room'});
+        let room = await bot.api.rooms.create({title: 'Irina´s bot privado'});
 
         // add user as member (bot is automatically added)
         let membership2 = await bot.api.memberships.create({
