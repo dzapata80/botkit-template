@@ -3,9 +3,9 @@
 //
 module.exports = function (controller) {
 
-    controller.hears( 'help', 'message,direct_message', async ( bot, message ) => {
+    controller.hears( 'ayuda', 'message,direct_message', async ( bot, message ) => {
 
-        let markDown = '**Available commands:**  \n';
+        let markDown = '**Comandos disponible:**  \n';
 
         controller.commandHelp.sort( ( a,b ) => {
 
@@ -13,7 +13,7 @@ module.exports = function (controller) {
         });
 
         controller.commandHelp.forEach( element => {
-            
+
             markDown += `**${ controller.checkAddMention( message.roomType, element.command ) }**: ${ element.text }  \n`
         });
 
@@ -22,5 +22,5 @@ module.exports = function (controller) {
         // text += "\n- " + bot.appendMention(message, "storage") + ": store picked color as a user preference";
     });
 
-    controller.commandHelp.push( { command: 'help', text: 'Show available commands/descriptions' } );
+    controller.commandHelp.push( { command: 'ayuda', text: 'commandos disponibles/descripcion' } );
 }
