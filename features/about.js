@@ -24,5 +24,5 @@ module.exports = function (controller) {
         await bot.reply( message, { markdown: markDown } );
     });
 
-    controller.commandHelp.push( { command: 'about', text: 'Muestra la metadata del bot' } );
+    controller.commandHelp.push( { command: 'about', text: 'Muestra las 3 metadata del bot' } );
 }
