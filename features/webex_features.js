@@ -9,8 +9,8 @@ module.exports = function(controller) {
 
     const NEW_ROOM_DIALOG = 'new_room_dialog';
     const dialog = new BotkitConversation(NEW_ROOM_DIALOG, controller);
-    dialog.say('I created this room so we could continue our conversation in private...');
-    dialog.ask('How does that sound?', async(response, convo, bot) => {
+    dialog.say('Cree un grupo para continuar nuestra conversacion en privado...');
+    dialog.ask('que te parece?', async(response, convo, bot) => {
 
     }, {key: 'how_it_sounds'});
     dialog.say('Ah, {{vars.how_it_sounds}}, eh?');

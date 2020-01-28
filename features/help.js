@@ -22,5 +22,5 @@ module.exports = function (controller) {
         // text += "\n- " + bot.appendMention(message, "storage") + ": store picked color as a user preference";
     });
 
-    controller.commandHelp.push( { command: 'ayuda', text: 'commandos disponibles/descripcion' } );
+    controller.commandHelp.push( { command: 'ayuda', text: 'commandos disponibles/descripción' } );
 }
