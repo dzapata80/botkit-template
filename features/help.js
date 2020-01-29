@@ -3,9 +3,9 @@
 //
 module.exports = function (controller) {
 
-    controller.hears( 'ayuda', 'message,direct_message', async ( bot, message ) => {
+    controller.hears( ['ayuda', 'help', 'help me', 'ayudame'], 'message,direct_message', async ( bot, message ) => {
 
-        let markDown = '**Comandos disponible:**  \n';
+        let markDown = '**Estos son los comandos con los que puedo ayudarte:**  \n';
 
         controller.commandHelp.sort( ( a,b ) => {
 
@@ -22,5 +22,5 @@ module.exports = function (controller) {
         // text += "\n- " + bot.appendMention(message, "storage") + ": store picked color as a user preference";
     });
 
-    controller.commandHelp.push( { command: 'ayuda', text: 'commandos disponibles/descripción' } );
+    controller.commandHelp.push( { command: 'ayuda', text: 'commandos disponibles / descripción' } );
 }

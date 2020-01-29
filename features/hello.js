@@ -7,7 +7,7 @@ module.exports = function( controller ) {
     controller.hears( [ 'hi','hello','howdy','hey','aloha','hola','bonjour','oi' ], 'message,direct_message', async ( bot,message ) => {
 
         await bot.reply( message,'Hola!' );
-        await bot.reply( message, { markdown: 'Intenta con "ayuda" para ver mis comandos.' } );
+        await bot.reply( message, { markdown: 'Intenta escribiendo "ayuda" para ver mis comandos.' } );
       });
 
     controller.hears( 'gatito', 'message,direct_message', async ( bot,message ) => {
